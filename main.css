@@ -236,11 +236,20 @@ section.visible {
   position: fixed;
   top: 15px;
   right: 15px;
-  background: var(--bg-gradient-start);
-  color: var(--accent);
+  background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 0;
   z-index: 1001;
+}
+
+/* Hamburger bars inside toggle */
+#nav-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: var(--accent);
+  border-radius: 2px;
 }
 
 /* Mobile-only nav and toggle */
@@ -254,10 +263,7 @@ section.visible {
     flex-direction: column;
     justify-content: flex-start;
     transform: translateX(100%);
-  }
-  /* closed state uses translateX */
-  nav.nav-menu.collapsed {
-    transform: translateX(100%);
+    transition: transform 0.3s ease;
   }
   /* open state */
   nav.nav-menu.open {
@@ -270,6 +276,7 @@ section.visible {
     height: calc(100% - var(--nav-height));
     padding: 20px;
     box-shadow: -2px 0 4px rgba(0,0,0,0.5);
+    background: var(--bg-gradient-start);
   }
   nav.nav-menu a {
     margin: 10px 0;
