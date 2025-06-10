@@ -251,35 +251,51 @@ section.visible {
   background-color: var(--accent);
   border-radius: 2px;
 }
-
-/* Mobile-only nav and toggle */
+/* Mobile‐only nav + toggle */
 @media (max-width: 600px) {
-  /* show toggle */
+  /* Show hamburger */
   #nav-toggle {
     display: block;
   }
-  /* hide nav off-screen */
 
+  /* Off‐canvas panel, off to the right */
   nav.nav-menu {
-    width: 100%;
-    left: 0;      /* stays pinned to left */
-    right: auto;  /* cancel any right pinning */
-    transform: translateX(-100%); /* off-screen to the left */
-  }
-  /* open state */
-  nav.nav-menu.open {
-    transform: translateX(0);
-  }
-  /* style mobile menu panel */
-  nav.nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    right: 0;
     width: 70%;
     max-width: 250px;
-    height: calc(100% - var(--nav-height));
-    padding: 20px;
-    box-shadow: -2px 0 4px rgba(0,0,0,0.5);
+    height: 100%;
     background: var(--bg-gradient-start);
+    box-shadow: -2px 0 4px rgba(0,0,0,0.5);
+    transform: translateX(200%);   /* hidden off‐screen right */
+    transition: transform 0.3s ease;
+    z-index: 1001;
   }
+  /* Stack the menu items vertically */
+nav.nav-menu {
+  display: flex;               /* still a flex container */
+  flex-direction: column;      /* switch from row to column */
+  align-items: flex-start;     /* left-align your links */
+  justify-content: flex-start; /* start at the top */
+}
+
+/* Make each link fill its own line */
+nav.nav-menu a {
+  display: block;
+  width: 100%;      /* optional, makes the whole panel clickable */
+  margin: 10px 0;   /* vertical spacing */
+}
+
+  /* Slide it back in when `.open` is toggled */
+  nav.nav-menu.open {
+    transform: translateX(100%);
+  }
+
+  /* Stack links vertically */
   nav.nav-menu a {
+    display: block;
     margin: 10px 0;
   }
 }
+
