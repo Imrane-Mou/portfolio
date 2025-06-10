@@ -259,11 +259,12 @@ section.visible {
     display: block;
   }
   /* hide nav off-screen */
+
   nav.nav-menu {
-    flex-direction: column;
-    justify-content: flex-start;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    width: 100%;
+    left: 0;      /* stays pinned to left */
+    right: auto;  /* cancel any right pinning */
+    transform: translateX(-100%); /* off-screen to the left */
   }
   /* open state */
   nav.nav-menu.open {
