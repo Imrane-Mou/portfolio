@@ -8,67 +8,153 @@
 </head>
 <body>
   <div class="markdown-body">
-    <!-- Hamburger toggle -->
-    <button id="nav-toggle" aria-label="Toggle menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <!-- Nav -->
-    <nav class="nav-menu">
+   
+    <nav class="nav-menu collapsed" aria-label="Main navigation">
       <a href="#about">À propos</a>
       <a href="#experience">Expérience</a>
       <a href="#formation">Formation</a>
       <a href="#competences">Compétences</a>
     </nav>
+<button id="nav-toggle" aria-label="Toggle menu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
 
-    <!-- Header -->
+
+    <!-- Header split into two halves -->
     <header class="site-header">
       <div class="header-left">
         <h1>
-          <span style="color: var(--accent); font-weight: 600;">Heey ! Je suis</span><br>
-          <span style="color: var(--text-primary); font-weight: 700;">Imrane</span>
+        <span style="color: var(--accent); font-weight: 600;">Heey ! Je suis </span></br>
+        <span style="color: var(--text-primary); font-weight: 700;">Imrane</span>
         </h1>
-        <p>Étudiant, recherche d'une alternance en M1 dans l'IA, cybersécurité, data analysis ou développement pour 2025.</p>
-      </div>
+
+      <p style="margin-top: 12px;">
+        Étudiant, recherche d'une alternance en M1 dans l'IA, cybersécurité, data analysis ou développement pour 2025.
+        </p>
+         </div>
       <div class="header-right">
-        <img src="me.jpg" alt="Portrait of Imrane Moumad">
+        <img src="pics/pic.jpg" alt="Portrait of Imrane Moumad">
       </div>
     </header>
+
+    <!-- Contact Info -->
+ 
 
     <!-- Sections -->
     <section id="about">
       <h2>À propos</h2>
-      <p>Dynamique et passionné … équipe professionnelle.</p>
+      <p>Dynamique et passionné par l'informatique, actuellement en fin de licence (L3), je suis à la recherche d'une alternance pour mon Master 1 afin de mettre en pratique mes compétences en développement logiciel, intelligence artificielle, cybersécurité, data analysis ou développement full-stack, tout en continuant à progresser au sein d'une équipe professionnelle.</p>
     </section>
 
-    <section id="competences">
+   <section id="competences">
       <h2>Compétences</h2>
-      <ul class="card-container-comp">
-        <li class="card-logo"><img src="pics/c.jpg" alt="Logo C" class="skill-logo"></li>
-        <!-- …all your other logos… -->
-      </ul>
+
+    
+  <ul class="card-container-comp">
+    <li class="card-logo">
+      <img src="pics/c.jpg" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/java.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/php.png" alt="C" class="skill-logo">
+    </li>
+    <li class="card-logo">
+      <img src="pics/html.png" alt="C" class="skill-logo">
+    </li>
+      <li class="card-logo">
+      <img src="pics/css.png" alt="C" class="skill-logo">
+    </li>
+      <li class="card-logo">
+      <img src="pics/js.jpg" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/sql.png" alt="C" class="skill-logo">
+    </li>
+    <li class="card-logo">
+      <img src="pics/bash.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/react.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/WordPress.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/Symfony.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/Tkinter.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/TensorFlow.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/PyQt5.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/MySQL.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/Oracle.png" alt="C" class="skill-logo">
+    </li>
+     <li class="card-logo">
+      <img src="pics/Git.png" alt="C" class="skill-logo">
+    </li>
+    </ul>
     </section>
 
     <section id="experience">
       <h2>Expérience</h2>
-      <!-- your subsections… -->
+      <div class="subsection">
+        <h3>Projets académiques</h3>
+         <ul  class="card-container">
+            <li class="card">Simulation multi-agents d'une colonie d'abeilles (Java, POO, FSM)</li>
+            <li class="card">Client-serveur d'achats en temps réel (Java, TCP sockets, multithreading)</li>
+            <li class="card">Serveur TFTP personnalisé (C, UDP, réseau)</li>
+            <li class="card">Mini shell POSIX avec redirections, piping et gestion de processus (C, fork/exec)</li>
+            <li class="card">Encodage/décodage binaire avec manipulation de bits et conversions ASCII (C)</li>
+            <li class="card">IA stratégique pour Tic-Tac-Toe avec apprentissage par renforcement (Python, Q-Learning, Tkinter)</li>
+            <li class="card">Web admin CRUD sécurisé avec base de données (PHP, HTML/CSS, Oracle)</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>Stage – CRP-CPO <span>Avril 2025 – Mai 2025</span></h3>
+        <ul class="card-container">
+            <li class="card">Conception d'une identité visuelle : logo vectoriel, charte graphique, typographie UI</li>
+            <li class="card">Développement full-stack d'un site à affichage dynamique d'événements (WordPress, React.js)</li>
+            <li class="card">Plateforme d'analyse de questionnaires avec graphiques (MySQL, PHP)</li>
+            <li class="card">Application de mesure du temps de réaction sous différents stimuli (Python, PyQt5)</li>
+            <li class="card">IA générative de musique émotionnelle (TensorFlow, Deep Learning)</li>
+        </ul>
+      </div>
+ 
     </section>
 
     <section id="formation">
       <h2>Formation</h2>
-      <p><strong>Licence Informatique</strong> • Université de Picardie Jules-Verne, Amiens (2021 – 2025)</p>
+      <p><strong>Licence Informatique</strong> &bull; Université de Picardie Jules-Verne, Amiens (2021 – 2025)</p>
     </section>
 
-    <footer>
-      <p>10 rue de la Hotoie, 80000 Amiens • Tél : 06 05 81 05 87</p>
-      <p>Email : <a href="mailto:imrane.moumad@outlook.com">imrane.moumad@outlook.com</a> • 
-         LinkedIn : <a href="https://www.linkedin.com/in/imrane-moumad-b1a4b32b6">imrane moumad</a> • 
-         GitHub : <a href="https://github.com/Imrane-Mou">Imrane-Mou</a></p>
-    </footer>
-  </div>
+ 
 
-  <script src="main.js"></script>
+   
+
+
+
+
+
+     <footer style="margin-top:40px; text-align:center; font-size:0.9rem; color:var(--text-primary);">
+      <p>10 rue de la Hotoie, 80000 Amiens &bull; Tél : 06 05 81 05 87</p>
+      <p>Email : <a href="mailto:imrane.moumad@outlook.com" style="color:var(--accent);">imrane.moumad@outlook.com</a> &bull; 
+         LinkedIn : <a href="https://www.linkedin.com/in/imrane-moumad-b1a4b32b6" style="color:var(--accent);">imrane moumad</a> &bull; 
+         GitHub : <a href="https://github.com/Imrane-Mou" style="color:var(--accent);">Imrane-Mou</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+  </div>
 </body>
 </html>
