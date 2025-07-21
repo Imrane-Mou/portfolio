@@ -16,9 +16,10 @@
  
     <nav class="nav-menu collapsed" aria-label="Main navigation">
       <a href="#about">À propos</a>
-      <a href="#>Mon Parcours">Mon Parcours</a>
+      <a href="#timeline">Mon Parcours</a>
       <a href="#competences">Compétences</a> 
       <a href="#experience">Expérience</a>
+      <a href="#Contactez-moi">Contactez-moi</a>
       
       
     </nav>
@@ -61,7 +62,7 @@
 
 
 
-<section class="timeline">
+<section id="timeline" class="timeline">
   <h2>Mon Parcours</h2></br></br>
 
    <div class="timeline-line"></div> 
@@ -109,6 +110,8 @@
 </section>
 
  
+
+
 
 
 
@@ -178,6 +181,8 @@
     </ul>
     </section>
 
+
+
     <section id="experience">
       <h2>Expérience</h2>
       <div class="subsection">
@@ -209,6 +214,31 @@
 
 
 
+    <section id="Contactez-moi">
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("o69sO5k1CFloNLs3X");
+  })();
+
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_wfyx1p6', 'template_e7kbhqa', e.target)
+      .then(() => alert('Message envoyé !'), 
+            error => alert('Erreur : ' + error));
+  }
+</script>
+
+
+<h2>Contactez-moi</h2>
+<form onsubmit="sendEmail(event)">
+  <input type="text" name="name" placeholder="Votre nom" required />
+  <input type="email" name="email" placeholder="Votre email" required />
+  <textarea name="message" placeholder="Votre message" required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+ </section>
+
    
 
 
@@ -216,7 +246,7 @@
 
 
      <footer style="margin-top:40px; text-align:center; font-size:0.9rem; color:var(--text-primary);">
-      <p>10 rue de la Hotoie, 80000 Amiens &bull; Tél : 06 05 81 05 87</p>
+      <p> 80000 Amiens &bull; Tél : 06 05 81 05 87</p>
       <p>Email : <a href="mailto:imrane.moumad@outlook.com" style="color:var(--accent);">imrane.moumad@outlook.com</a> &bull; 
          LinkedIn : <a href="https://www.linkedin.com/in/imrane-moumad-b1a4b32b6" style="color:var(--accent);">imrane moumad</a> &bull; 
          GitHub : <a href="https://github.com/Imrane-Mou" style="color:var(--accent);">Imrane-Mou</a></p>
