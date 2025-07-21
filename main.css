@@ -299,3 +299,115 @@ nav.nav-menu a {
   }
 }
 
+
+
+
+
+
+
+
+
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Vertical center line through the whole timeline */
+
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* ← Now it will align using the top */
+  margin: 3rem 0;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+
+/* Alternate left/right */
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-date {
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+  color: #bbb;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+  text-align: left;
+}
+
+
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 300px;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-content p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+/* DOT centered on the page */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 14px ;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  background: #00bfff;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* Vertical line extending down from each dot */
+.timeline-dot::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 15vh;
+  background: #ccc;
+  z-index: -1;
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  bottom: 14px; /* same as `top` in ::after */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 10vh;
+  background: #ccc;
+  z-index: -1;
+}
+
