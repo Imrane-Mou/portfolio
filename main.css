@@ -11,7 +11,6 @@
   --font-tech: 'Roboto Mono', monospace;
 }
 
-/* Global reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +24,6 @@ body {
   padding-top: var(--nav-height);
 }
 
-/* Full-width fixed nav bar */
 nav.nav-menu {
   position: fixed;
   top: 0;
@@ -65,7 +63,6 @@ nav.nav-menu a.active::after {
   width: 100%;
 }
 
-/* Page content container */
 .markdown-body {
   max-width: 800px;
   margin: 0 auto;
@@ -73,7 +70,6 @@ nav.nav-menu a.active::after {
   background: transparent;
 }
 
-/* Header styling */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -89,7 +85,6 @@ header p {
   font-family: var(--font-tech);
 }
 
-/* Section headings */
 h2 {
   font-size: 1.6rem;
   color: var(--accent);
@@ -99,14 +94,12 @@ h2 {
   font-family: var(--font-tech);
 }
 
-/* Lists */
 ul {
   margin-left: 1.2em;
   margin-bottom: 1.2em;
   font-family: var(--font-tech);
 }
 
-/* Contact links centered */
 .contact p {
   text-align: center;
   margin-bottom: 10px;
@@ -119,7 +112,6 @@ ul {
   font-family: var(--font-tech);
 }
 
-/* Header split into halves */
 .site-header {
   display: flex;
   align-items: center;
@@ -141,7 +133,6 @@ ul {
   transform: scale(1.05);
 }
 
-/* Cards for interests section */
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -165,14 +156,12 @@ ul {
   transform: translateY(-10px);
 }
 
-/* Responsive adjustments for cards */
 @media (max-width: 600px) {
   .card-container {
     grid-template-columns: 1fr;
   }
 }
 
-/* Section reveal animation */
 section {
   scroll-margin-top: calc(var(--nav-height) + 20px);
   margin: 100px 0;
@@ -190,21 +179,27 @@ section.visible {
   margin: 50px 0;
 }
 
-/* Custom card logos for competences with reveal */
+/* ── SKILL LOGOS GRID ───────────────────────────────────────────────────── */
 .card-container-comp {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   margin-top: 16px;
+  list-style: none;
+  padding: 0;
 }
+
 .card-logo {
-  background: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 14px 8px 10px;
+  border-radius: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease, transform 0.2s ease;
+  gap: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
   opacity: 0;
   transform: translateY(20px);
 }
@@ -212,25 +207,37 @@ section.visible {
   opacity: 1;
   transform: none;
 }
+.card-logo:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
 .skill-logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
-/* Responsive adjustments for logos */
+.skill-name {
+  font-size: 0.65rem;
+  color: #aaa;
+  font-family: var(--font-tech);
+  text-align: center;
+  line-height: 1.2;
+}
+
 @media (max-width: 800px) {
   .card-container-comp {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 500px) {
   .card-container-comp {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+/* ────────────────────────────────────────────────────────────────────────── */
 
-/* Hide toggle by default on desktop */
 #nav-toggle {
   display: none;
   position: fixed;
@@ -241,8 +248,6 @@ section.visible {
   font-size: 0;
   z-index: 1001;
 }
-
-/* Hamburger bars inside toggle */
 #nav-toggle .bar {
   display: block;
   width: 24px;
@@ -251,14 +256,11 @@ section.visible {
   background-color: var(--accent);
   border-radius: 2px;
 }
-/* Mobile‐only nav + toggle */
+
 @media (max-width: 600px) {
-  /* Show hamburger */
   #nav-toggle {
     display: block;
   }
-
-  /* Off‐canvas panel, off to the right */
   nav.nav-menu {
     position: fixed;
     top: var(--nav-height);
@@ -268,45 +270,22 @@ section.visible {
     height: 100%;
     background: var(--bg-gradient-start);
     box-shadow: -2px 0 4px rgba(0,0,0,0.5);
-    transform: translateX(200%);   /* hidden off‐screen right */
+    transform: translateX(200%);
     transition: transform 0.3s ease;
     z-index: 1001;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-  /* Stack the menu items vertically */
-nav.nav-menu {
-  display: flex;               /* still a flex container */
-  flex-direction: column;      /* switch from row to column */
-  align-items: flex-start;     /* left-align your links */
-  justify-content: flex-start; /* start at the top */
-}
-
-/* Make each link fill its own line */
-nav.nav-menu a {
-  display: block;
-  width: 100%;      /* optional, makes the whole panel clickable */
-  margin: 10px 0;   /* vertical spacing */
-}
-
-  /* Slide it back in when `.open` is toggled */
+  nav.nav-menu a {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
   nav.nav-menu.open {
     transform: translateX(100%);
   }
-
-  /* Stack links vertically */
-  nav.nav-menu a {
-    display: block;
-    margin: 10px 0;
-  }
 }
-
-
-
-
-
-
-
-
-
 
 .timeline {
   position: relative;
@@ -314,39 +293,27 @@ nav.nav-menu a {
   margin: auto;
   padding: 2rem 0;
 }
-
-/* Vertical center line through the whole timeline */
-
-
 .timeline-item {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* ← Now it will align using the top */
+  align-items: flex-start;
   margin: 3rem 0;
   width: 100%;
   padding: 0 2rem;
 }
-
-
-/* Alternate left/right */
 .timeline-item:nth-child(even) {
   flex-direction: row-reverse;
 }
-
 .timeline-date {
   width: 120px;
   text-align: right;
   font-weight: bold;
   color: #bbb;
 }
-
 .timeline-item:nth-child(even) .timeline-date {
   text-align: left;
 }
-
-
-
 .timeline-content {
   display: flex;
   flex-direction: column;
@@ -355,28 +322,22 @@ nav.nav-menu a {
   border-radius: 6px;
   width: 300px;
 }
-
 .timeline-content h3 {
   margin: 0;
   padding: 0;
 }
-
 .timeline-content p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #ccc;
 }
-
-
 .timeline-item:nth-child(even) .timeline-content {
   text-align: right;
 }
-
-/* DOT centered on the page */
 .timeline-dot {
   position: absolute;
   left: 50%;
-  top: 14px ;
+  top: 14px;
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 14px;
@@ -385,8 +346,6 @@ nav.nav-menu a {
   border: 2px solid white;
   border-radius: 50%;
 }
-
-/* Vertical line extending down from each dot */
 .timeline-dot::after {
   content: "";
   position: absolute;
@@ -398,11 +357,10 @@ nav.nav-menu a {
   background: #ccc;
   z-index: -1;
 }
-
 .timeline-dot::before {
   content: "";
   position: absolute;
-  bottom: 14px; /* same as `top` in ::after */
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
@@ -417,17 +375,12 @@ form {
   padding: 30px;
   border-radius: 10px;
   backdrop-filter: blur(6px);
-
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-family: var(--font-tech);
   color: var(--text-primary);
 }
-
-
-
-
 form input,
 form textarea {
   width: 100%;
@@ -440,19 +393,16 @@ form textarea {
   font-size: 1rem;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
-
 form input:focus,
 form textarea:focus {
   border-color: var(--accent);
   background-color: #1a1a1a;
   outline: none;
 }
-
 form textarea {
   min-height: 120px;
   resize: vertical;
 }
-
 form button {
   background-color: var(--accent);
   color: #fff;
@@ -465,18 +415,13 @@ form button {
   font-family: var(--font-tech);
   transition: background-color 0.3s ease;
 }
-
 form button:hover {
-  background-color: #0052a3; /* darker blue on hover */
+  background-color: #0052a3;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 600px) {
-  form {
-    padding: 20px;
-  }
+  form { padding: 20px; }
 }
-
 
 @media (max-width: 768px) {
   .timeline-item {
@@ -485,27 +430,642 @@ form button:hover {
     text-align: center;
     padding: 1rem;
   }
-
   .timeline-date {
     width: auto;
     text-align: center !important;
     margin-bottom: 10px;
   }
-
   .timeline-content {
     width: 100%;
     text-align: center !important;
     padding: 0;
   }
-
   .timeline-dot {
     left: 50%;
     top: -10px;
     transform: translate(-50%, 0);
   }
-
   .timeline-dot::after,
   .timeline-dot::before {
     display: none;
   }
 }
+
+/* ── TIMELINE REDESIGN ──────────────────────────────────────────────────── */
+
+/* Remove old timeline rules by overriding them */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0;
+  width: 100%;
+  padding: 0 2rem;
+  gap: 16px;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Date badge */
+.timeline-date {
+  min-width: 130px;
+  max-width: 130px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--accent);
+  padding-top: 6px;
+  line-height: 1.4;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+  text-align: left;
+}
+
+/* Content card */
+.timeline-content {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  background: rgba(0, 102, 204, 0.06);
+  width: auto;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-content:hover {
+  background: rgba(0, 102, 204, 0.12);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  border-left: none;
+  border-right: 3px solid var(--accent);
+  text-align: right;
+}
+
+.timeline-content h3 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin: 0 0 6px 0;
+}
+
+.timeline-content p {
+  font-size: 0.78rem;
+  color: #bbb;
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+}
+
+/* Tech tags */
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.timeline-item:nth-child(even) .timeline-tags {
+  justify-content: flex-end;
+}
+
+.timeline-tag {
+  font-size: 0.62rem;
+  font-family: var(--font-tech);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 2px 7px;
+  background: transparent;
+  opacity: 0.85;
+}
+
+/* Glowing dot */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent), 0 0 16px rgba(0,102,204,0.4);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 6px var(--accent), 0 0 12px rgba(0,102,204,0.3); }
+  50%       { box-shadow: 0 0 12px var(--accent), 0 0 24px rgba(0,102,204,0.6); }
+}
+
+.timeline-dot::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 12vh;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  z-index: -1;
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 8vh;
+  background: linear-gradient(to top, var(--accent), transparent);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 0 0 0 28px;
+    gap: 8px;
+  }
+  .timeline-date {
+    min-width: unset;
+    max-width: unset;
+    text-align: left !important;
+  }
+  .timeline-content {
+    border-left: 3px solid var(--accent) !important;
+    border-right: none !important;
+    text-align: left !important;
+    width: 100%;
+  }
+  .timeline-tags {
+    justify-content: flex-start !important;
+  }
+  .timeline-dot {
+    left: 0;
+    top: 20px;
+    transform: translate(0, -50%);
+  }
+  .timeline-dot::after,
+  .timeline-dot::before {
+    display: none;
+  }
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── TIMELINE DOT FIX ───────────────────────────────────────────────────── */
+/* Push content away from center line so dot doesn't overlap card */
+.timeline-item {
+  gap: 0;
+}
+
+.timeline-item .timeline-content {
+  margin-left: 24px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 0;
+  margin-right: 24px;
+}
+
+.timeline-dot {
+  flex-shrink: 0;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── TIMELINE LAYOUT PROPER FIX ─────────────────────────────────────────── */
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;  /* left | dot column | right */
+  align-items: start;
+  margin: 2rem 0;
+  padding: 0;
+  gap: 0;
+}
+
+/* Odd items: date left, dot center, content right */
+.timeline-item:nth-child(odd) .timeline-date {
+  grid-column: 1;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 6px;
+}
+.timeline-item:nth-child(odd) .timeline-dot {
+  grid-column: 2;
+  justify-self: center;
+  margin-top: 6px;
+}
+.timeline-item:nth-child(odd) .timeline-content {
+  grid-column: 3;
+  margin-left: 20px;
+  margin-right: 0;
+  border-left: 3px solid var(--accent);
+  border-right: none;
+  text-align: left;
+}
+.timeline-item:nth-child(odd) .timeline-tags {
+  justify-content: flex-start;
+}
+
+/* Even items: content left, dot center, date right */
+.timeline-item:nth-child(even) {
+  flex-direction: unset; /* cancel old rule */
+}
+.timeline-item:nth-child(even) .timeline-content {
+  grid-column: 1;
+  grid-row: 1;
+  margin-right: 20px;
+  margin-left: 0;
+  border-right: 3px solid var(--accent);
+  border-left: none;
+  text-align: right;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  margin-top: 6px;
+  position: static;
+  transform: none;
+}
+.timeline-item:nth-child(even) .timeline-date {
+  grid-column: 3;
+  grid-row: 1;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 6px;
+}
+.timeline-item:nth-child(even) .timeline-tags {
+  justify-content: flex-end;
+}
+
+/* Dot: static in grid flow, no absolute positioning */
+.timeline-dot {
+  position: static;
+  transform: none;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent), 0 0 16px rgba(0,102,204,0.4);
+  animation: pulse 2.5s ease-in-out infinite;
+  align-self: start;
+}
+
+/* Vertical line: use ::after on the grid cell wrapper instead */
+.timeline-dot::after,
+.timeline-dot::before {
+  display: none;
+}
+
+/* Draw the center line as a pseudo on the section itself */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--accent) 10%, var(--accent) 90%, transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.timeline {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 28px;
+    gap: 6px;
+  }
+  .timeline-item:nth-child(even) .timeline-content,
+  .timeline-item:nth-child(odd) .timeline-content {
+    border-left: 3px solid var(--accent) !important;
+    border-right: none !important;
+    text-align: left !important;
+    margin: 0;
+    width: 100%;
+  }
+  .timeline-item:nth-child(even) .timeline-tags,
+  .timeline-item:nth-child(odd) .timeline-tags {
+    justify-content: flex-start;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+  }
+  .timeline::before {
+    left: 7px;
+  }
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── EXPERIENCE SECTION REDESIGN ────────────────────────────────────────── */
+
+/* Remove card-grid from experience, use job cards instead */
+#experience .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+#experience .card {
+  justify-content: flex-start;
+  text-align: left;
+  min-height: unset;
+  padding: 10px 14px;
+  border: none;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  background: rgba(0,102,204,0.05);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #ccc;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#experience .card:hover {
+  background: rgba(0,102,204,0.12);
+  transform: translateX(4px);
+}
+
+/* Job/project block header */
+.job-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+}
+
+.job-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-tech);
+}
+
+.job-date {
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-family: var(--font-tech);
+  white-space: nowrap;
+}
+
+/* Subsection wrapper becomes a styled job card */
+.subsection {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 24px 0;
+  transition: border-color 0.2s ease;
+}
+
+.subsection:hover {
+  border-color: #444;
+}
+
+/* Remove the default h3 styling inside subsection */
+.subsection h3 {
+  display: none; /* replaced by .job-header */
+}
+
+/* Stack tags at the bottom of each subsection */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.exp-tag {
+  font-size: 0.62rem;
+  font-family: var(--font-tech);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 2px 7px;
+  background: transparent;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  #experience .card-container {
+    grid-template-columns: 1fr;
+  }
+  .job-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── TIMELINE LINE FIX ──────────────────────────────────────────────────── */
+/* Start the vertical line after the h2 heading */
+.timeline::before {
+  top: 60px; /* push below the h2 + border-bottom */
+}
+
+/* Animate timeline items and subsections on scroll */
+.timeline-item,
+.subsection {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.timeline-item.visible,
+.subsection.visible {
+  opacity: 1;
+  transform: none;
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── TIMELINE LINE FINAL FIX ────────────────────────────────────────────── */
+/* Remove the ::before line on .timeline entirely */
+.timeline::before {
+  display: none;
+}
+
+/* Draw the line on the items wrapper instead */
+.timeline-items {
+  position: relative;
+}
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--accent) 5%, var(--accent) 95%, transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline-items::before {
+    left: 7px;
+  }
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── ABOUT SECTION REDESIGN ─────────────────────────────────────────────── */
+#about p {
+  line-height: 1.8;
+  color: #ccc;
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}
+
+.about-tagline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.about-tagline span {
+  color: var(--accent);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.about-pill {
+  background: rgba(0,102,204,0.07);
+  border: 1px solid #2a2a2a;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.about-pill strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  font-size: 0.8rem;
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  font-family: var(--font-tech);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.about-cta:hover {
+  background: #0052a3;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── JS ENHANCEMENTS SUPPORT ────────────────────────────────────────────── */
+/* Blinking cursor for typing effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Active nav link */
+nav.nav-menu a.active {
+  color: var(--text-primary);
+}
+nav.nav-menu a.active::after {
+  width: 100%;
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ── REPO LINKS ─────────────────────────────────────────────────────────── */
+.timeline-links,
+.exp-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.repo-link {
+  font-size: 0.72rem;
+  font-family: var(--font-tech);
+  color: var(--text-primary);
+  background: rgba(0,102,204,0.15);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 3px 10px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.repo-link:hover {
+  background: rgba(0,102,204,0.35);
+  transform: translateY(-2px);
+}
+
+/* Link inside a card (projets notables) */
+.card-link {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.card-link:hover {
+  border-bottom-color: var(--accent);
+}
+/* ────────────────────────────────────────────────────────────────────────── */
