@@ -1069,3 +1069,17 @@ nav.nav-menu a.active::after {
   border-bottom-color: var(--accent);
 }
 /* ────────────────────────────────────────────────────────────────────────── */
+/* Language toggle in nav */
+nav.nav-menu a.lang-toggle {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin-left: 10px;
+  font-size: 0.85rem;
+}
+nav.nav-menu a.lang-toggle::after {
+  display: none;
+}
+nav.nav-menu a.lang-toggle:hover {
+  background: rgba(0,102,204,0.15);
+}
