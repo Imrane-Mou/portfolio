@@ -359,6 +359,35 @@ resource "local_file" "ansible_inventory" {
             <span class="project-tag">JWT</span>
             <span class="project-tag">Docker</span>
           </div>
+          <div class="code-snippet">
+            <div class="code-snippet-file">
+              <span>ApplicationService.cs</span>
+              <a href="https://github.com/Imrane-Mou/JobTrackerApi/blob/main/JobTrackerApi/Services/ApplicationService.cs" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+            <pre><code>public async Task&lt;ApplicationDetailDto?&gt; ChangeStatusAsync(Guid id, AppStatus newStatus)
+{
+    var app = await _db.Applications
+        .Include(a => a.Contacts).Include(a => a.StatusHistories)
+        .FirstOrDefaultAsync(a => a.Id == id);
+
+    if (app is null) return null;
+
+    if (app.Status != newStatus)
+    {
+        app.StatusHistories.Add(new StatusHistory
+        {
+            ApplicationId = app.Id,
+            OldStatus = app.Status,
+            NewStatus = newStatus
+        });
+        app.Status = newStatus;
+        app.UpdatedAt = DateTime.UtcNow;
+        await _db.SaveChangesAsync();
+    }
+
+    return app.ToDetailDto();
+}</code></pre>
+          </div>
           <a href="https://github.com/Imrane-Mou/JobTrackerApi" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
         </div>
         <div class="project-card">
