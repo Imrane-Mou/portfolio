@@ -416,9 +416,12 @@
           </div>
         </div>
         <form class="contact-form" data-error-msg="Erreur : ">
-          <input type="text" name="name" placeholder="Votre nom" required />
-          <input type="email" name="email" placeholder="Votre email" required />
-          <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+          <label for="contact-name" class="sr-only">Votre nom</label>
+          <input id="contact-name" type="text" name="name" placeholder="Votre nom" required />
+          <label for="contact-email" class="sr-only">Votre email</label>
+          <input id="contact-email" type="email" name="email" placeholder="Votre email" required />
+          <label for="contact-message" class="sr-only">Votre message</label>
+          <textarea id="contact-message" name="message" placeholder="Votre message" rows="5" required></textarea>
           <button type="submit" data-sent-label="Message envoyé ✓">Envoyer</button>
         </form>
       </div>
