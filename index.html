@@ -22,7 +22,7 @@
   <meta name="author" content="Imrane Moumad" />
 </head>
 <body>
-  <button id="nav-toggle" aria-label="Ouvrir le menu">
+  <button id="nav-toggle" aria-label="Ouvrir le menu" data-close-label="Fermer le menu" aria-expanded="false" aria-controls="nav-links">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
@@ -31,7 +31,7 @@
 
     <nav class="nav-menu" aria-label="Navigation principale">
       <a href="#top" class="nav-wordmark">imrane<span>.</span>dev</a>
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
         <a href="#about">À propos</a>
         <a href="#timeline">Parcours</a>
         <a href="#competences">Compétences</a>

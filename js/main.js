@@ -54,9 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.querySelector('nav.nav-menu');
   if (toggle && nav) {
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    const openLabel = toggle.getAttribute('aria-label');
+    const closeLabel = toggle.dataset.closeLabel || openLabel;
+
+    const setOpen = isOpen => {
+      nav.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? closeLabel : openLabel);
+    };
+
+    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
     nav.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => nav.classList.remove('open'));
+      link.addEventListener('click', () => setOpen(false));
     });
   }
 
