@@ -60,7 +60,7 @@ nav.nav-menu {
   justify-content: space-between;
   gap: 24px;
   padding: 18px 5vw;
-  background: rgba(26, 29, 36, 0.88);
+  background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
@@ -113,7 +113,7 @@ nav.nav-menu {
   width: 36px;
   height: 36px;
   background: var(--bg3);
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent);
   border-radius: 8px;
   cursor: pointer;
   position: fixed;
