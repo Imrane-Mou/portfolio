@@ -169,23 +169,6 @@ header.site-header {
   overflow: hidden;
 }
 
-.hero-top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.hero-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--accent);
-  flex-shrink: 0;
-  animation: fadeUp 0.6s ease both;
-}
-
 .hero-badge {
   font-family: var(--font-mono);
   color: var(--accent);
@@ -193,6 +176,7 @@ header.site-header {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: 24px;
   animation: fadeUp 0.6s ease both;
 }
 
