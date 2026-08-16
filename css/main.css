@@ -5,14 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #1a1d24;
-  --bg2: #22262f;
-  --bg3: #2c313c;
-  --line: #454b59;
-  --fg: #f4f2ec;
-  --muted: #9298a6;
-  --accent: #4d8dfa;
-  --accent2: #5bb8d4;
+  --bg: #000000;
+  --bg2: #141414;
+  --bg3: #1f1f1f;
+  --line: #333333;
+  --fg: #ffffff;
+  --muted: #b0b0b0;
+  --accent: #0066cc;
+  --accent2: #3399ff;
 
   --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -24,7 +24,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: linear-gradient(135deg, var(--bg), #1a1a1a);
   color: var(--fg);
   font-family: var(--font-body);
   line-height: 1.5;
