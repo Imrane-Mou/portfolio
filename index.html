@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imrane Moumad — DevOps & Backend | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="canonical" href="https://imrane-mou.github.io/portfolio/" />
@@ -21,80 +22,80 @@
   <meta name="author" content="Imrane Moumad" />
 </head>
 <body>
-    <button id="nav-toggle" aria-label="Toggle menu">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
+  <button id="nav-toggle" aria-label="Ouvrir le menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
   <div class="markdown-body">
- 
-    <nav class="nav-menu collapsed" aria-label="Main navigation">
-      <a href="#about">À propos</a>
-      <a href="#timeline">Mon Parcours</a>
-      <a href="#competences">Compétences</a> 
-      <a href="#experience">Expérience</a>
-      <a href="#Contactez-moi">Contactez-moi</a>
-      <a href="en/" class="lang-toggle">EN</a>
+
+    <nav class="nav-menu" aria-label="Navigation principale">
+      <a href="#top" class="nav-wordmark">imrane<span>.</span>dev</a>
+      <div class="nav-links">
+        <a href="#about">À propos</a>
+        <a href="#timeline">Parcours</a>
+        <a href="#competences">Compétences</a>
+        <a href="#experience">Expérience</a>
+        <a href="#projects">Projets</a>
+        <a href="#Contactez-moi">Contact</a>
+        <a href="en/" class="lang-toggle">EN</a>
+      </div>
     </nav>
 
-    <header class="site-header">
-      <div class="header-left">
-        <h1>
-        <span style="color: var(--accent); font-weight: 600;">Heey ! Je suis </span></br>
-        <span style="color: var(--text-primary); font-weight: 700;">Imrane</span>
-        </h1>
-        <p style="margin-top: 12px;">
-          Étudiant en Master Informatique, en recherche d'une alternance DevOps ou Backend pour mon M2 à partir de septembre 2026.
-        </p>
-      </div>
-      <div class="header-right">
-        <img src="assets/images/pic.jpg" alt="Portrait of Imrane Moumad">
+    <header class="site-header" id="top">
+      <div class="hero-badge">Disponible pour une alternance — Sept. 2026</div>
+      <h1>Imrane Moumad. DevOps & Backend, bout en bout.</h1>
+      <p class="hero-subtitle">Étudiant en Master Informatique (ISIMA), je conçois et déploie des systèmes complets — du code backend à l'infrastructure cloud — seul, avec de vraies contraintes de production.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="assets/docs/Imrane_Moumad_CV.pdf" download>↓ Télécharger mon CV</a>
+        <a class="btn btn-outline" href="#Contactez-moi">Me contacter</a>
       </div>
     </header>
 
     <section id="about">
-      <h2>À propos</h2><br>
-
-      <p class="about-tagline">
-        Étudiant Master Informatique — <span>Backend</span> & <span>DevOps</span><br>
-        En recherche d'alternance pour septembre 2026
-      </p>
-
-      <p>Autonome et orienté résultats, je conçois et déploie des projets complets de bout en bout — du backend Python/Java à l'infrastructure cloud. Mes deux stages et projets académiques m'ont confronté à des contraintes de production réelles.</p>
-
-      <div class="about-grid">
-        <div class="about-pill">
-          <strong>Infrastructure & DevOps</strong>
-          Docker, OpenTofu, Ansible, GitLab CI/CD, Traefik, OpenBAO — pipeline complet déployé en autonomie sur multi-cloud.
+      <div class="about-layout">
+        <div>
+          <div class="section-eyebrow">01 — À propos</div>
+          <h2 style="margin:0;">Autonome, orienté résultats.</h2>
         </div>
-        <div class="about-pill">
-          <strong>Backend & APIs</strong>
-          Python/Flask, Java/Spring Boot, Go — backend concurrent avec throttling, packaging Windows autonome.
-        </div>
-        <div class="about-pill">
-          <strong>Données & Géospatial</strong>
-          Agrégation de 3 000+ sources RTE/Enedis, intégration d'APIs gouvernementales IGN, GeoJSON, point-in-polygon.
-        </div>
-        <div class="about-pill">
-          <strong>Livraison rapide</strong>
-          4 outils opérationnels en 2 semaines en environnement médical. Habitué à travailler seul avec des deadlines réelles.
+        <div>
+          <p class="about-lead">Je conçois et déploie des projets complets de bout en bout — du backend Python/Java à l'infrastructure cloud. Mes deux stages et projets académiques m'ont confronté à des contraintes de production réelles.</p>
+
+          <div class="about-grid">
+            <div class="about-pill">
+              <strong>Infrastructure & DevOps</strong>
+              <span class="pill-desc">Docker, OpenTofu, Ansible, GitLab CI/CD, Traefik, OpenBAO — pipeline complet déployé en autonomie sur multi-cloud.</span>
+            </div>
+            <div class="about-pill">
+              <strong>Backend & APIs</strong>
+              <span class="pill-desc">Python/Flask, Java/Spring Boot, Go — backend concurrent avec throttling, packaging Windows autonome.</span>
+            </div>
+            <div class="about-pill">
+              <strong>Données & Géospatial</strong>
+              <span class="pill-desc">Agrégation de 3 000+ sources RTE/Enedis, intégration d'APIs gouvernementales IGN, GeoJSON, point-in-polygon.</span>
+            </div>
+            <div class="about-pill">
+              <strong>Livraison rapide</strong>
+              <span class="pill-desc">4 outils opérationnels en 2 semaines en environnement médical. Habitué à travailler seul avec des deadlines réelles.</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <a class="about-cta" href="assets/docs/Imrane_Moumad_CV.pdf" download>↓ Télécharger mon CV</a>
     </section>
 
-    <section id="timeline" class="timeline">
-      <h2>Mon Parcours</h2><br><br>
+    <section id="timeline">
+      <div class="section-eyebrow">02 — Parcours</div>
+      <h2>Mon parcours.</h2>
 
       <div class="timeline-items">
 
         <div class="timeline-item">
-          <div class="timeline-date">Avr. – Juil. 2026</div>
           <span class="timeline-dot"></span>
+          <div class="timeline-date">Avr. – Juil. 2026</div>
           <div class="timeline-content">
             <h3>Stage chez KYNTUS (division EnerFYH)</h3>
-            <p>Développement solo de deux applications pour une entreprise du secteur de l'énergie. <strong>BESS Site Finder</strong> : outil desktop de prospection géospatiale intégrant 5 sources de données externes (IGN, Capareseau, RTE, BAN, DGFiP), avec une fonctionnalité de recherche de propriétaires de parcelles construite en interne pour éviter une API tierce payante. <strong>Site vitrine multi-projets</strong> : plateforme React pour élus et riverains, avec backend serverless publiant automatiquement sur GitHub.</p>
+            <div class="timeline-org">Prospection géospatiale & plateforme web</div>
+            <p>Développement solo de deux applications pour une entreprise du secteur de l'énergie : BESS Site Finder (outil desktop de prospection géospatiale, 5 sources de données externes) et un site vitrine multi-projets React avec backend serverless publiant automatiquement sur GitHub.</p>
             <div class="timeline-tags">
               <span class="timeline-tag">Python</span>
               <span class="timeline-tag">Flask</span>
@@ -107,11 +108,12 @@
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">2024 – 2027</div>
           <span class="timeline-dot"></span>
+          <div class="timeline-date">2024 – 2027</div>
           <div class="timeline-content">
             <h3>Master Informatique — ISIMA</h3>
-            <p>Université Clermont Auvergne. Spécialisation backend, DevOps, systèmes et réseaux.</p>
+            <div class="timeline-org">Université Clermont Auvergne</div>
+            <p>Spécialisation backend, DevOps, systèmes et réseaux.</p>
             <div class="timeline-tags">
               <span class="timeline-tag">DevOps</span>
               <span class="timeline-tag">Backend</span>
@@ -121,11 +123,12 @@
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">2026 — individuel</div>
           <span class="timeline-dot"></span>
+          <div class="timeline-date">2026 — individuel</div>
           <div class="timeline-content">
             <h3>Projet DevOps — ACNHCollector</h3>
-            <p>Pipeline DevOps complet en totale autonomie sur infrastructure multi-cloud. IaC OpenTofu, Ansible, secrets OpenBAO, pipelines GitLab CI/CD sur 3 dépôts, reverse proxy Traefik, Docker multi-stage.</p>
+            <div class="timeline-org">Infrastructure multi-cloud</div>
+            <p>Pipeline DevOps complet en totale autonomie. IaC OpenTofu, Ansible, secrets OpenBAO, pipelines GitLab CI/CD sur 3 dépôts, reverse proxy Traefik, Docker multi-stage.</p>
             <div class="timeline-tags">
               <span class="timeline-tag">Docker</span>
               <span class="timeline-tag">OpenTofu</span>
@@ -135,19 +138,20 @@
               <span class="timeline-tag">OpenBAO</span>
             </div>
             <div class="timeline-links">
-              <a href="https://github.com/Imrane-Mou/acnh-collector-infra" target="_blank" class="repo-link">⎇ infra</a>
-              <a href="https://github.com/Imrane-Mou/acnh-collector-backend" target="_blank" class="repo-link">⎇ backend</a>
-              <a href="https://github.com/Imrane-Mou/acnh-collector-frontend" target="_blank" class="repo-link">⎇ frontend</a>
+              <a href="https://github.com/Imrane-Mou/acnh-collector-infra" target="_blank" rel="noopener" class="repo-link">⎇ infra</a>
+              <a href="https://github.com/Imrane-Mou/acnh-collector-backend" target="_blank" rel="noopener" class="repo-link">⎇ backend</a>
+              <a href="https://github.com/Imrane-Mou/acnh-collector-frontend" target="_blank" rel="noopener" class="repo-link">⎇ frontend</a>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">Avr. – Mai 2025</div>
           <span class="timeline-dot"></span>
+          <div class="timeline-date">Avr. – Mai 2025</div>
           <div class="timeline-content">
             <h3>Stage chez CRP-CPO</h3>
-            <p>4 outils livrés en 2 semaines dans un environnement médical et de recherche. Plateforme web, analyse de questionnaires, IA générative musicale, app de mesure du temps de réaction.</p>
+            <div class="timeline-org">Environnement médical & recherche</div>
+            <p>4 outils livrés en 2 semaines : plateforme web, analyse de questionnaires, IA générative musicale, app de mesure du temps de réaction.</p>
             <div class="timeline-tags">
               <span class="timeline-tag">React</span>
               <span class="timeline-tag">PHP</span>
@@ -159,11 +163,12 @@
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">2021 – 2025</div>
           <span class="timeline-dot"></span>
+          <div class="timeline-date">2021 – 2025</div>
           <div class="timeline-content">
             <h3>Licence Informatique</h3>
-            <p>Université de Picardie Jules-Verne, Amiens.</p>
+            <div class="timeline-org">Université de Picardie Jules-Verne, Amiens</div>
+            <p>Fondamentaux en algorithmique, systèmes et programmation.</p>
             <div class="timeline-tags">
               <span class="timeline-tag">Java</span>
               <span class="timeline-tag">C</span>
@@ -177,164 +182,209 @@
     </section>
 
     <section id="competences">
-        <h2>Compétences</h2>
-        <ul class="card-container-comp">
-  
-          <!-- Languages -->
-          <li class="card-logo"><img src="assets/images/python.png" alt="Python" class="skill-logo"><span class="skill-name">Python</span></li>
-          <li class="card-logo"><img src="assets/images/java.png" alt="Java" class="skill-logo"><span class="skill-name">Java</span></li>
-          <li class="card-logo"><img src="assets/images/go.png" alt="Go" class="skill-logo"><span class="skill-name">Go</span></li>
-          <li class="card-logo"><img src="assets/images/c.png" alt="C" class="skill-logo"><span class="skill-name">C</span></li>
-          <li class="card-logo"><img src="assets/images/bash.png" alt="Bash" class="skill-logo"><span class="skill-name">Bash</span></li>
-          <li class="card-logo"><img src="assets/images/PowerShell.png" alt="PowerShell" class="skill-logo"><span class="skill-name">PowerShell</span></li>
-          <li class="card-logo"><img src="assets/images/JavaScript.png" alt="JavaScript" class="skill-logo"><span class="skill-name">JavaScript</span></li>
-          <li class="card-logo"><img src="assets/images/php.png" alt="PHP" class="skill-logo"><span class="skill-name">PHP</span></li>
-  
-          <!-- DevOps & Infra -->
-          <li class="card-logo"><img src="assets/images/docker.png" alt="Docker" class="skill-logo"><span class="skill-name">Docker</span></li>
-          <li class="card-logo"><img src="assets/images/opentufu.png" alt="OpenTofu" class="skill-logo"><span class="skill-name">OpenTofu</span></li>
-          <li class="card-logo"><img src="assets/images/ansible.png" alt="Ansible" class="skill-logo"><span class="skill-name">Ansible</span></li>
-          <li class="card-logo"><img src="assets/images/gitlab.png" alt="GitLab CI/CD" class="skill-logo"><span class="skill-name">GitLab CI/CD</span></li>
-          <li class="card-logo"><img src="assets/images/traefik.png" alt="Traefik" class="skill-logo"><span class="skill-name">Traefik</span></li>
-          <li class="card-logo"><img src="assets/images/Linux.png" alt="Linux" class="skill-logo"><span class="skill-name">Linux</span></li>
-  
-          <!-- Backend & Frameworks -->
-          <li class="card-logo"><img src="assets/images/spring-boot.png" alt="Spring Boot" class="skill-logo"><span class="skill-name">Spring Boot</span></li>
-          <li class="card-logo"><img src="assets/images/flask.png" alt="Flask" class="skill-logo"><span class="skill-name">Flask</span></li>
-          <li class="card-logo"><img src="assets/images/react.png" alt="React" class="skill-logo"><span class="skill-name">React</span></li>
-  
-          <!-- Databases -->
-          <li class="card-logo"><img src="assets/images/PostgreSQL.png" alt="PostgreSQL" class="skill-logo"><span class="skill-name">PostgreSQL</span></li>
-          <li class="card-logo"><img src="assets/images/MySQL.png" alt="MySQL" class="skill-logo"><span class="skill-name">MySQL</span></li>
-  
-          <!-- Tools -->
-          <li class="card-logo"><img src="assets/images/Git.png" alt="Git" class="skill-logo"><span class="skill-name">Git</span></li>
-  
-        </ul>
-      </section>
+      <div class="section-eyebrow">03 — Compétences</div>
+      <h2>Ma boîte à outils.</h2>
+
+      <div class="skills-grid">
+        <div>
+          <div class="skill-group-name">Langages</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Go</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Bash</span>
+            <span class="skill-pill">PowerShell</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group-name">Infra & DevOps</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">OpenTofu</span>
+            <span class="skill-pill">Ansible</span>
+            <span class="skill-pill">GitLab CI/CD</span>
+            <span class="skill-pill">Traefik</span>
+            <span class="skill-pill">OpenBAO</span>
+            <span class="skill-pill">Linux</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group-name">Backend & Frameworks</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">Spring Boot</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">PHP</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group-name">Données</div>
+          <div class="skill-pills">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="experience">
-      <h2>Expérience</h2>
+      <div class="section-eyebrow">04 — Expérience</div>
+      <h2>Ce que j'ai livré.</h2>
 
-      <div class="subsection">
-        <div class="job-header">
-          <span class="job-title">Stage — KYNTUS (division EnerFYH)</span>
-          <span class="job-date">Avr. 2026 – Juil. 2026</span>
+      <div class="exp-list">
+        <div class="subsection">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Stage — KYNTUS (division EnerFYH)</span>
+              <div class="job-org">Prospection géospatiale & plateforme web</div>
+            </div>
+            <span class="job-date">Avr. 2026 – Juil. 2026</span>
+          </div>
+          <ul class="card-container">
+            <li class="card">Développement solo de <strong>BESS Site Finder</strong> — outil desktop de prospection géospatiale pour projets de stockage d'énergie par batteries, intégrant 5 sources de données externes (IGN, Capareseau, RTE SimuRacco, BAN, DGFiP)</li>
+            <li class="card">Conception et livraison en autonomie d'une fonctionnalité de recherche de propriétaires de parcelles, évitant à l'entreprise l'adoption d'une API tierce payante — devenue l'une des fonctionnalités les plus utilisées de l'outil</li>
+            <li class="card">Parseur sur mesure transformant le texte libre du simulateur RTE en données structurées et filtrables</li>
+            <li class="card">Site vitrine multi-projets React avec backend serverless (Vercel/Node.js) et publication de contenu automatisée</li>
+            <li class="card">Backend concurrent avec throttling ; packagé en exécutable Windows autonome (PyInstaller + PyWebView)</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">Flask</span>
+            <span class="exp-tag">Leaflet.js</span>
+            <span class="exp-tag">React</span>
+            <span class="exp-tag">Node.js</span>
+            <span class="exp-tag">API REST</span>
+            <span class="exp-tag">Multithreading</span>
+            <span class="exp-tag">PyInstaller</span>
+          </div>
         </div>
-        <ul class="card-container">
-          <li class="card">Développement solo de <strong>BESS Site Finder</strong> — outil desktop de prospection géospatiale pour projets de stockage d'énergie par batteries (BESS), intégrant 5 sources de données externes (IGN, Capareseau, RTE SimuRacco, BAN, DGFiP)</li>
-          <li class="card">Conception et livraison en autonomie d'une fonctionnalité de recherche de propriétaires de parcelles à partir de données publiques (DGFiP), évitant à l'entreprise l'adoption d'une API tierce payante — devenue l'une des fonctionnalités les plus utilisées de l'outil</li>
-          <li class="card">Parseur sur mesure transformant le texte libre non structuré du simulateur de raccordement réseau RTE en données structurées et filtrables</li>
-          <li class="card"><strong>Site vitrine multi-projets</strong> : plateforme React pour élus et riverains, backend serverless (Vercel/Node.js) lisant/écrivant un JSON via l'API GitHub, publication de contenu automatisée (formulaire admin → commit → redéploiement)</li>
-          <li class="card">Backend concurrent avec throttling pour gérer les limites des API publiques ; packagé en exécutable Windows autonome (PyInstaller + PyWebView)</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Python</span>
-          <span class="exp-tag">Flask</span>
-          <span class="exp-tag">Leaflet.js</span>
-          <span class="exp-tag">React</span>
-          <span class="exp-tag">Node.js</span>
-          <span class="exp-tag">API REST</span>
-          <span class="exp-tag">Multithreading</span>
-          <span class="exp-tag">PyInstaller</span>
+
+        <div class="subsection">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Projet DevOps — ACNHCollector</span>
+              <div class="job-org">Individuel</div>
+            </div>
+            <span class="job-date">2026</span>
+          </div>
+          <ul class="card-container">
+            <li class="card">Pipeline DevOps complet en totale autonomie sur infrastructure multi-cloud (Clever Cloud, OVH, EduInfra)</li>
+            <li class="card">IaC avec <strong>OpenTofu</strong> multi-cloud ; génération automatique de l'inventaire <strong>Ansible</strong> depuis les outputs OpenTofu</li>
+            <li class="card">Secrets centralisés via <strong>OpenBAO</strong> — credentials dynamiques et de courte durée</li>
+            <li class="card">Pipelines <strong>GitLab CI/CD</strong> sur 3 dépôts distincts (backend, frontend, infrastructure)</li>
+            <li class="card">Reverse proxy <strong>Traefik</strong> avec routage par label Docker ; conteneurisation multi-stage</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Docker</span>
+            <span class="exp-tag">OpenTofu</span>
+            <span class="exp-tag">Ansible</span>
+            <span class="exp-tag">GitLab CI/CD</span>
+            <span class="exp-tag">Traefik</span>
+            <span class="exp-tag">OpenBAO</span>
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">Vue.js</span>
+          </div>
+          <div class="timeline-links" style="margin-top:16px;">
+            <a href="https://github.com/Imrane-Mou/acnh-collector-infra" target="_blank" rel="noopener" class="repo-link">⎇ infra</a>
+            <a href="https://github.com/Imrane-Mou/acnh-collector-backend" target="_blank" rel="noopener" class="repo-link">⎇ backend</a>
+            <a href="https://github.com/Imrane-Mou/acnh-collector-frontend" target="_blank" rel="noopener" class="repo-link">⎇ frontend</a>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Stage — CRP-CPO</span>
+              <div class="job-org">Environnement médical & recherche</div>
+            </div>
+            <span class="job-date">Avr. 2025 – Mai 2025</span>
+          </div>
+          <ul class="card-container">
+            <li class="card"><strong>4 outils livrés en 2 semaines</strong> dans un environnement médical et de recherche</li>
+            <li class="card">Plateforme web de gestion d'événements dynamique (React, WordPress)</li>
+            <li class="card">Outil d'analyse de questionnaires avec visualisations interactives automatisées (PHP, MySQL)</li>
+            <li class="card">Prototype d'IA générative musicale conditionnée par émotion — sortie MIDI (TensorFlow)</li>
+            <li class="card">Application de mesure du temps de réaction pour stimuli visuels et sonores (Python, PyQt5)</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">React</span>
+            <span class="exp-tag">WordPress</span>
+            <span class="exp-tag">PHP</span>
+            <span class="exp-tag">MySQL</span>
+            <span class="exp-tag">TensorFlow</span>
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">PyQt5</span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="subsection">
-        <div class="job-header">
-          <span class="job-title">Projet DevOps — ACNHCollector</span>
-          <span class="job-date">2026 — individuel</span>
+    <section id="projects">
+      <div class="section-eyebrow">05 — Projets</div>
+      <h2>Projets notables.</h2>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-name">Microservices en Go</div>
+          <div class="project-desc">API REST, messaging asynchrone NATS JetStream, notifications email.</div>
+          <div class="project-tags">
+            <span class="project-tag">Go</span>
+            <span class="project-tag">NATS</span>
+          </div>
+          <a href="https://github.com/Imrane-Mou/middleware_project" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
         </div>
-        <ul class="card-container">
-          <li class="card">Pipeline DevOps complet en totale autonomie sur infrastructure multi-cloud (Clever Cloud, OVH, EduInfra)</li>
-          <li class="card">IaC avec <strong>OpenTofu</strong> multi-cloud ; génération automatique de l'inventaire <strong>Ansible</strong> depuis les outputs OpenTofu</li>
-          <li class="card">Secrets centralisés via <strong>OpenBAO</strong> (Vault-compatible) — credentials dynamiques et de courte durée</li>
-          <li class="card">Pipelines <strong>GitLab CI/CD</strong> sur 3 dépôts distincts (backend, frontend, infrastructure)</li>
-          <li class="card">Reverse proxy <strong>Traefik</strong> avec routage par label Docker ; conteneurisation multi-stage (Vue.js/Nginx + Spring Boot/JRE Alpine)</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Docker</span>
-          <span class="exp-tag">OpenTofu</span>
-          <span class="exp-tag">Ansible</span>
-          <span class="exp-tag">GitLab CI/CD</span>
-          <span class="exp-tag">Traefik</span>
-          <span class="exp-tag">OpenBAO</span>
-          <span class="exp-tag">Spring Boot</span>
-          <span class="exp-tag">Vue.js</span>
+        <div class="project-card">
+          <div class="project-name">Mini shell POSIX</div>
+          <div class="project-desc">Redirections, piping et gestion de processus (C, fork/exec).</div>
+          <div class="project-tags">
+            <span class="project-tag">C</span>
+            <span class="project-tag">POSIX</span>
+          </div>
+          <a href="https://github.com/Imrane-Mou/miniShell" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
         </div>
-        <div class="exp-links">
-          <a href="https://github.com/Imrane-Mou/acnh-collector-infra" target="_blank" class="repo-link">⎇ infra</a>
-          <a href="https://github.com/Imrane-Mou/acnh-collector-backend" target="_blank" class="repo-link">⎇ backend</a>
-          <a href="https://github.com/Imrane-Mou/acnh-collector-frontend" target="_blank" class="repo-link">⎇ frontend</a>
+        <div class="project-card">
+          <div class="project-name">Simulation colonie d'abeilles</div>
+          <div class="project-desc">Simulation multi-agents, POO, automates à états finis.</div>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">POO</span>
+          </div>
+          <a href="https://github.com/Imrane-Mou/bee_simulation" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
+        </div>
+        <div class="project-card">
+          <div class="project-name">JobTrackerApi</div>
+          <div class="project-desc">API REST ASP.NET Core de suivi de candidatures, architecture en couches, JWT, Docker.</div>
+          <div class="project-tags">
+            <span class="project-tag">ASP.NET Core</span>
+            <span class="project-tag">EF Core</span>
+            <span class="project-tag">JWT</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <a href="https://github.com/Imrane-Mou" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
+        </div>
+        <div class="project-card">
+          <div class="project-name">Détection brute-force SSH</div>
+          <div class="project-desc">Détection via logs Linux + protection automatisée fail2ban.</div>
+          <div class="project-tags">
+            <span class="project-tag">Linux</span>
+            <span class="project-tag">Security</span>
+          </div>
+          <a href="https://github.com/Imrane-Mou" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
+        </div>
+        <div class="project-card">
+          <div class="project-name">IA Tic-Tac-Toe</div>
+          <div class="project-desc">IA stratégique avec apprentissage par renforcement Q-Learning.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Q-Learning</span>
+            <span class="project-tag">Tkinter</span>
+          </div>
+          <a href="https://github.com/Imrane-Mou" target="_blank" rel="noopener" class="project-link">⎇ GitHub</a>
         </div>
       </div>
-
-      <div class="subsection">
-        <div class="job-header">
-          <span class="job-title">Stage — CRP-CPO</span>
-          <span class="job-date">Avr. 2025 – Mai 2025</span>
-        </div>
-        <ul class="card-container">
-          <li class="card"><strong>4 outils livrés en 2 semaines</strong> dans un environnement médical et de recherche</li>
-          <li class="card">Plateforme web de gestion d'événements dynamique (React, WordPress)</li>
-          <li class="card">Outil d'analyse de questionnaires avec visualisations interactives automatisées (PHP, MySQL)</li>
-          <li class="card">Prototype d'IA générative musicale conditionnée par émotion — sortie MIDI (TensorFlow)</li>
-          <li class="card">Application de mesure du temps de réaction pour stimuli visuels et sonores (Python, PyQt5)</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">React</span>
-          <span class="exp-tag">WordPress</span>
-          <span class="exp-tag">PHP</span>
-          <span class="exp-tag">MySQL</span>
-          <span class="exp-tag">TensorFlow</span>
-          <span class="exp-tag">Python</span>
-          <span class="exp-tag">PyQt5</span>
-        </div>
-      </div>
-
-      <div class="subsection">
-        <div class="job-header">
-          <span class="job-title">Projets notables</span>
-        </div>
-        <ul class="card-container">
-          <li class="card">
-            Microservices en Go — API REST, messaging asynchrone <strong>NATS JetStream</strong>, notifications email
-            <a href="https://github.com/Imrane-Mou/middleware_project" target="_blank" class="card-link">⎇ GitHub</a>
-          </li>
-          <li class="card">
-            Mini shell POSIX avec redirections, piping et gestion de processus (C, fork/exec)
-            <a href="https://github.com/Imrane-Mou/miniShell" target="_blank" class="card-link">⎇ GitHub</a>
-          </li>
-          <li class="card">
-            Simulation multi-agents colonie d'abeilles — Java, POO, automates à états finis
-            <a href="https://github.com/Imrane-Mou/bee_simulation" target="_blank" class="card-link">⎇ GitHub</a>
-          </li>
-          <li class="card">Détection brute-force SSH via logs Linux + protection automatisée fail2ban</li>
-          <li class="card">IA stratégique Tic-Tac-Toe avec apprentissage par renforcement Q-Learning (Python, Tkinter)</li>
-          <li class="card">
-            JobTrackerApi — API REST <strong>ASP.NET Core</strong> personnelle de suivi de candidatures, architecture en couches (Controller/Service/DbContext), historique d'audit des changements de statut, authentification JWT, conteneurisée avec Docker
-          </li>
-          <li class="card">
-            Client de jeu mobile 2D — <strong>Unity/C#</strong>, architecture orientée données (ScriptableObjects) et pilotée par événements, UI de combat entièrement générée au runtime
-          </li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Go</span>
-          <span class="exp-tag">C</span>
-          <span class="exp-tag">Java</span>
-          <span class="exp-tag">C#</span>
-          <span class="exp-tag">Spring Boot</span>
-          <span class="exp-tag">ASP.NET Core</span>
-          <span class="exp-tag">EF Core</span>
-          <span class="exp-tag">PostgreSQL</span>
-          <span class="exp-tag">JWT</span>
-          <span class="exp-tag">Unity</span>
-          <span class="exp-tag">Docker</span>
-          <span class="exp-tag">Linux</span>
-          <span class="exp-tag">Python</span>
-        </div>
-      </div>
-
     </section>
 
     <section id="Contactez-moi">
@@ -343,22 +393,27 @@
         (function(){
           emailjs.init("o69sO5k1CFloNLs3X");
         })();
-
-        function sendEmail(e) {
-          e.preventDefault();
-          emailjs.sendForm('service_wfyx1p6', 'template_e7kbhqa', e.target)
-            .then(() => alert('Message envoyé !'), 
-                  error => alert('Erreur : ' + error));
-        }
       </script>
 
-      <h2>Contactez-moi</h2>
-      <form onsubmit="sendEmail(event)">
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="email" name="email" placeholder="Votre email" required />
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+      <div class="contact-layout">
+        <div>
+          <div class="section-eyebrow">06 — Contact</div>
+          <h2>Discutons de votre équipe.</h2>
+          <p class="contact-lead">En recherche d'une alternance DevOps ou Backend à partir de septembre 2026. Disponible pour un échange rapide.</p>
+          <div class="contact-details">
+            <div><span class="label">Email : </span><a href="mailto:imrane.moumad@outlook.com" data-copied-msg="Email copié !">imrane.moumad@outlook.com</a></div>
+            <div><span class="label">Tél : </span><span>06 05 81 05 87</span></div>
+            <div><span class="label">LinkedIn : </span><a href="https://www.linkedin.com/in/imrane-moumad-b1a4b32b6" target="_blank" rel="noopener">imrane moumad</a></div>
+            <div><span class="label">GitHub : </span><a href="https://github.com/Imrane-Mou" target="_blank" rel="noopener">Imrane-Mou</a></div>
+          </div>
+        </div>
+        <form class="contact-form" data-error-msg="Erreur : ">
+          <input type="text" name="name" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+          <button type="submit" data-sent-label="Message envoyé ✓">Envoyer</button>
+        </form>
+      </div>
     </section>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNCPGXM4EH"></script>
@@ -369,11 +424,9 @@
       gtag('config', 'G-LNCPGXM4EH');
     </script>
 
-    <footer style="margin-top:40px; text-align:center; font-size:0.9rem; color:var(--text-primary);">
-      <p>Tél : 06 05 81 05 87</p>
-      <p>Email : <a href="mailto:imrane.moumad@outlook.com" style="color:var(--accent);">imrane.moumad@outlook.com</a> &bull; 
-         LinkedIn : <a href="https://www.linkedin.com/in/imrane-moumad-b1a4b32b6" style="color:var(--accent);">imrane moumad</a> &bull; 
-         GitHub : <a href="https://github.com/Imrane-Mou" style="color:var(--accent);">Imrane-Mou</a></p>
+    <footer class="site-footer">
+      <div>© 2026 Imrane Moumad</div>
+      <div>Conçu & développé par Imrane</div>
     </footer>
 
     <script src="js/main.js"></script>
