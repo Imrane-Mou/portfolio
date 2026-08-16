@@ -143,6 +143,28 @@
               <a href="https://github.com/Imrane-Mou/acnh-collector-backend" target="_blank" rel="noopener" class="repo-link">⎇ backend</a>
               <a href="https://github.com/Imrane-Mou/acnh-collector-frontend" target="_blank" rel="noopener" class="repo-link">⎇ frontend</a>
             </div>
+            <div class="code-snippet">
+              <div class="code-snippet-file">
+                <span>tofu/ansible_inventory.tf</span>
+                <a href="https://github.com/Imrane-Mou/acnh-collector-infra/blob/main/tofu/ansible_inventory.tf" target="_blank" rel="noopener">Voir sur GitHub →</a>
+              </div>
+              <pre><code># Auto-generate the Ansible inventory after VM creation.
+# Use the DNS name so CI has a stable target (IP changes every apply).
+resource "local_file" "ansible_inventory" {
+  filename = "${path.module}/../ansible/inventories/prod/inventory"
+  content  = &lt;&lt;-EOT
+    [servers]
+    ${var.isima_username}.uca-devops.ovh
+
+    [servers:vars]
+    ansible_user=${var.vm_username}
+    ansible_ssh_private_key_file=~/.ssh/tp_vm_key
+    ansible_python_interpreter=/usr/bin/python3
+  EOT
+
+  depends_on = [ovh_domain_zone_record.vm_dns]
+}</code></pre>
+            </div>
           </div>
         </div>
 

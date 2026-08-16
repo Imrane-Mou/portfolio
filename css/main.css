@@ -369,6 +369,45 @@ header.site-header h1 {
   font-weight: 600;
 }
 
+/* ---------------- CODE SNIPPET ---------------- */
+
+.code-snippet {
+  margin-top: 16px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.code-snippet-file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.code-snippet-file a { color: var(--muted); }
+.code-snippet-file a:hover { color: var(--accent); }
+
+.code-snippet pre {
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+.code-snippet code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--fg);
+  white-space: pre;
+}
+
 /* ---------------- SKILLS ---------------- */
 
 .skills-grid {
